@@ -28,12 +28,11 @@ This project is part of the **main repository** and focuses on **AI-driven scree
 
 ## **Screenshots** 
 
-(img/Screenshot 2025-02-24 034920.png)
+![Screenshot 1](img/Screenshot%202025-02-24%20034920.png)
 
-(img/Screenshot 2025-02-23 172404.png)
+![Screenshot 2](img/Screenshot%202025-02-23%20172404.png)
 
-(img/Screenshot 2025-02-23 182109.png)
-
+![Screenshot 3](img/Screenshot%202025-02-23%20182109.png)
 
 ## **Technical Implementation**  
 
