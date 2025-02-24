@@ -1,0 +1,232 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* Sidebar width and remaining space */
+  grid-template-rows: auto 1fr; /* Header and content */
+  grid-template-areas:
+    "sidebar header"
+    "sidebar content";
+  height: 100vh;
+  background: linear-gradient(to bottom, #120a27, #000000);
+  color: #fff;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  color: #ddd;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to right, #9400D3, #C779D0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo svg {
+  margin-right: 8px;
+}
+
+.menu {
+  flex-grow: 1;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: #bbb;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.menu-item:hover {
+  background-color: rgba(148, 0, 211, 0.1);
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.menu-item.active {
+  background: linear-gradient(to right, #9400D3, #C779D0);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  opacity: 0.7;
+}
+
+.logout {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  grid-area: content;
+  padding: 40px;
+  overflow-y: auto;
+  width: 100%; /* Take up full width */
+}
+
+.header {
+  grid-area: header;
+  margin-bottom: 40px;
+  text-align: left;
+  padding: 40px;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  color: #eee;
+  background: linear-gradient(to right, #C779D0, #9400D3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  font-size: 18px;
+  color: #ccc;
+  font-weight: 300;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.metric-card {
+  background-color: rgba(48, 27, 64, 0.8);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.metric-card h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #ddd;
+  background: linear-gradient(to right, #C779D0, #9400D3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metric-card p {
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.chart-card {
+  background-color: rgba(48, 27, 64, 0.8);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chart-card h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #ddd;
+  background: linear-gradient(to right, #C779D0, #9400D3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.schedule-recommendations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.schedule,
+.health-summary,
+.workout-summary {
+  background-color: rgba(48, 27, 64, 0.8);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.schedule h3,
+.health-summary h3,
+.workout-summary h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #ddd;
+  background: linear-gradient(to right, #C779D0, #9400D3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.schedule ul,
+.health-summary ul,
+.workout-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.schedule li,
+.health-summary li,
+.workout-summary li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  color: #ccc;
+}
+
+.schedule li:last-child,
+.health-summary li:last-child,
+.workout-summary li:last-child {
+  border-bottom: none;
+}
+
+.health-summary,
+.workout-summary {
+  grid-column: span 1; /* Each takes one column */
+}

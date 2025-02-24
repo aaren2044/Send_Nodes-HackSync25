@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #2c0e63, #000000); /* Darker gradient */
+    color: white;
+    height: auto; /* Changed to auto */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    overflow: auto;
+  }
+  
+  #root {
+    padding: 20px; /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1,
+  h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px; /* Reduced margin */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Neon text effect */
+  }
+  
+  .chart-container {
+    margin-bottom: 30px; /* Reduced margin */
+    border-radius: 15px;
+    padding: 20px; /* Reduced padding */
+    width: 95%; /* Increased width */
+    max-width: 800px; /* Reduced max-width */
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly brighter background */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  .chart-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Reduced padding */
+    width: 100%; /* Take full width */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  .activity-section {
+    width: 100%;
+    max-width: 800px; /* Match chart container */
+    margin-bottom: 40px; /* Reduced margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden; /* Ensure consistent border radius */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  .activity-section h2 {
+    margin-bottom: 15px; /* Reduced margin */
+    font-size: 2em; /* Slightly larger heading */
+  }
+  
+  .date-navigation {
+    display: none;
+  }
+  
+  .date-navigation button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .date-navigation button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .date-navigation button:disabled {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+  }
+  
+  .ring-chart-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+  
+  .ring-chart {
+    width: 100%;
+    height: 100%;
+  }

@@ -1,0 +1,8 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #301934, #000000); /* Purple to Black Gradient */
+  color: white; /* Set default text color to white for better readability */
+  height: 100vh; /* Make sure the gradient covers the full height of the viewport */
+}

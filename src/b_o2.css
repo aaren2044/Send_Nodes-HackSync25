@@ -1,0 +1,171 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000000, #1a202c); /* Dark background */
+  color: white;
+  overflow: auto;
+  transition: background 0.3s ease, color 0.3s ease;
+  width: 100vw; /* Ensure the body takes up the full viewport width */
+}
+
+.dark {
+  background: linear-gradient(to bottom, #000000, #1a202c);
+  color: white;
+}
+
+.light {
+  background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.app-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.light .app-title {
+  color: #333;
+}
+
+.heartbeat-icon {
+  margin-right: 10px;
+  color: #ff69b4;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.date-selector {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 600px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.light .date-selector {
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.date-selector label {
+  margin-right: 15px;
+  font-size: 1.2em;
+  color: #eee;
+  transition: color 0.3s ease;
+}
+
+.light .date-selector label {
+  color: #555;
+}
+
+.date-selector select {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #6a0dad;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  flex-grow: 1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light .date-selector select {
+  background-color: #ddd;
+  color: #333;
+}
+
+.date-selector select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(148, 0, 211, 0.7);
+}
+
+.light .date-selector select:focus {
+  box-shadow: 0 0 5px rgba(51, 51, 51, 0.3);
+}
+
+.calendar-icon {
+  margin-right: 8px;
+  color: #c778dd;
+  transition: color 0.3s ease;
+}
+
+.light .calendar-icon {
+  color: #777;
+}
+
+.chart-wrapper {
+  width: 90vw;
+  height: 70vh;
+  max-width: 800px;
+  max-height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+.light .chart-wrapper {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 2px solid #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.chart-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.chart-header {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
+}
+
+.light .chart-header {
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}

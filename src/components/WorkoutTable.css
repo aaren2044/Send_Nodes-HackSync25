@@ -1,0 +1,203 @@
+.workout-container {
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    position: relative; /* Needed for positioning the popup */
+  }
+  
+  .workout-container h2 {
+    color: #DDA0DD;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Table styles */
+  .workout-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  .workout-container th,
+  .workout-container td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.1em;
+  }
+  
+  .workout-container th {
+    background-color: rgba(75, 0, 130, 0.5);
+    color: #FFFFFF;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .workout-container tbody tr {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .workout-container tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Workout Popup styles */
+  .workout-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .workout-popup-content {
+    background-color: #1e1e1e; /* Dark background color */
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    position: relative; /* For close button positioning */
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .workout-popup-content h3 {
+    color: #DDA0DD;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .workout-popup-content p {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
+  .workout-popup-content h4 {
+    margin-top: 20px;
+    color: #DDA0DD;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .detail-item {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(75, 0, 130, 0.1);
+    font-size: 1em;
+  }
+  
+  .detail-item strong {
+    color: #DDA0DD;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #DDA0DD;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  
+  /* Animations for icons */
+  .fa-spin {
+    animation: fa-spin 2s infinite linear;
+  }
+  
+  .fa-pulse {
+    animation: fa-pulse 1s infinite steps(8);
+  }
+  
+  .fa-beat {
+    animation: fa-beat 1s infinite alternate;
+    transform-origin: center;
+  }
+  
+  .fa-bounce {
+    animation: fa-bounce 2s infinite alternate;
+  }
+  
+  @keyframes fa-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fa-pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fa-beat {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+  @keyframes fa-bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* New styles for the popup header and icon */
+  .popup-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .popup-header h3 {
+    margin-left: 15px;
+  }
+  
+  .workout-icon {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    margin-right: 10px;
+  }

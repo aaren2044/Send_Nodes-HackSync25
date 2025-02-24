@@ -1,0 +1,193 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, black, purple);
+    color: white;
+    min-height: 100vh; /* Ensure full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 95%;
+    max-width: 1200px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+  
+  .date-navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .date-navigation button {
+    background: linear-gradient(to right, #8e44ad, #c0392b); /* Shining purple */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 15px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-size: 200% auto;
+    transition: background-position 0.5s ease;
+  }
+  
+  .date-navigation button:hover {
+    background-position: right center;
+  }
+  
+  .date-navigation span {
+    color: white;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .chart {
+    display: flex;
+    align-items: flex-end;
+    height: 250px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 15px;
+    gap: 5px; /* Increased gap */
+    position: relative;
+    margin-bottom: 60px; /* Increased margin to accommodate labels */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 25px; /* Adjust for symmetry */
+    overflow: visible; /* Ensure labels are not clipped */
+  }
+  
+  .bar {
+    width: calc(100% / 24 - 5px); /* Adjust bar width */
+    background: linear-gradient(to bottom, #e74c3c, #f39c12); /* Reddish-orange gradient */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.3s ease;
+    margin: 0 auto; /* Center the bars */
+  }
+  
+  .bar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .bar:hover {
+    transform: translateY(-5px);
+  }
+  
+  .bar:hover:before {
+    opacity: 1;
+  }
+  
+  .hour-label {
+    font-size: 0.8em;
+    color: #ddd;
+    position: absolute;
+    bottom: -45px; /* Adjusted position */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    display: block;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .average-value {
+    font-size: 0.7em;
+    color: white;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  
+  .bar:hover .average-value {
+    opacity: 1;
+  }
+  
+  .intro-text {
+    color: #ccc;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 50px;
+  }
+  
+  .average-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 10;
+    text-align: right;
+    font-size: 0.9em;
+    padding-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Match font */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow */
+  }
+  
+  .average-line span {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 3px 5px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }

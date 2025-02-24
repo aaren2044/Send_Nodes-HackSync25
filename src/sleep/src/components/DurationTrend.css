@@ -1,0 +1,71 @@
+/* src/sleep/src/components/DurationTrend.css */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-gray-400 {
+  color: rgb(156, 163, 175);
+}
+
+.bg-gray-800 {
+  background-color: rgb(31, 41, 55);
+}
+
+.border-gray-700 {
+  border-color: rgb(55, 65, 81);
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+/* Add more CSS rules as needed */

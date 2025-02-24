@@ -1,0 +1,43 @@
+.health-container {
+  padding: 20px;
+  font-family: sans-serif;
+  color: #fff;
+  min-height: 100vh; /* Ensure full height */
+}
+
+.health-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.health-section {
+  background-color: rgba(48, 27, 64, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.health-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.health-section p {
+  font-size: 16px;
+}
+
+.health-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.health-section li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.health-section li:last-child {
+  border-bottom: none;
+}
