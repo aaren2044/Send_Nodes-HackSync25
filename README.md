@@ -34,6 +34,8 @@ This project is part of the **main repository** and focuses on **AI-driven scree
 
 ![Screenshot 3](img/Screenshot%202025-02-23%20182109.png)
 
+![Screenshot 4](img/a7789d0a-b2e4-47f9-8fb9-f653ebd77a37.jfif)
+
 ## **Technical Implementation**  
 
 ### **📌 Data Processing:**  
